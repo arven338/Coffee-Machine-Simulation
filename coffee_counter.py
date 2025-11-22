@@ -25,7 +25,17 @@ class CoffeeMachine:
             f" Milk: {self.milk}\n"
             f" Status: {self.status}\n"
         )
-        
+
+    # Refill function
+    def refill(self, water=0.0, coffee_beans=0.0, sugar=0.0, milk=0.0):
+        if water >= 0 and coffee_beans >= 0 and sugar >= 0 and milk >= 0:
+            self.water += water
+            self.coffee_beans += coffee_beans
+            self.sugar += sugar
+            self.milk += milk
+        else:
+            pass
+
     # Launch Coffee-machine logic
     def launch(self):
         if self.status == 1:
